@@ -1,19 +1,37 @@
-# 👁️ AI Face Recognition Attendance System
+# 🛠️ Admin Panel – AI Face Recognition Attendance System
 
-An intelligent attendance system that uses **Face Recognition (YOLO + FaceNet)** to automatically detect and mark attendance in real time.
+The **Admin Panel** is responsible for managing users, monitoring attendance, and analyzing system data. It provides full control over the attendance system with approval workflows and insights.
 
 ---
 
 ## 🚀 Features
 
-* 🔐 Admin login system
-* 👤 User registration with face capture
-* ⏳ Admin approval workflow (Approve / Reject users)
-* 📷 Real-time face detection using YOLOv8
-* 🧠 Face recognition using FaceNet embeddings
-* 🕒 Automatic attendance marking (Check-in / Check-out)
-* 📊 Dashboard with analytics and insights
-* 📧 Email notifications for approval & attendance
+* 🔐 **Admin Authentication**
+
+  * Secure login system for administrators
+
+* 👤 **User Management**
+
+  * View registered users
+  * Approve or reject new registrations
+  * Track user status (Pending / Approved / Rejected)
+
+* 📊 **Dashboard & Analytics**
+
+  * Total users, attendance stats
+  * Daily / monthly attendance insights
+  * Graphs and visual analytics
+
+* 🕒 **Attendance Monitoring**
+
+  * View all attendance records
+  * Check-in / Check-out tracking
+  * Status (Present / Absent / Half-day)
+
+* 📧 **Email Notifications**
+
+  * Send approval/rejection emails
+  * Notify users about attendance updates
 
 ---
 
@@ -22,62 +40,44 @@ An intelligent attendance system that uses **Face Recognition (YOLO + FaceNet)**
 * **Frontend**: Streamlit
 * **Backend**: Python
 * **Database**: SQL Server (pyodbc)
-* **Computer Vision**: OpenCV, YOLOv8
-* **Deep Learning**: FaceNet (facenet-pytorch)
-* **Others**: NumPy, Pandas
+* **Visualization**: Pandas, Charts
+* **Computer Vision**: OpenCV, YOLO, FaceNet
 
 ---
 
-## 📂 Project Structure
+## 📂 Folder Structure
 
 ```
-Smart_Attendance/
-│── app.py
+admin_app/
+│── app.py                 # Entry point
 │── requirements.txt
 │
-├── components/      # UI elements (navbar, sidebar, cards)
-├── database/        # DB connection & queries
-├── modules/         # Core logic (attendance, auth, recognition)
-├── services/        # Email service
-├── utils/           # Helpers & validators
-├── views/           # Pages (dashboard, admin panel, analytics)
-├── static/          # Images / assets
+├── components/            # UI components (navbar, sidebar, cards)
+├── database/              # DB connection & queries
+├── modules/               # Core logic (auth, attendance, recognition)
+├── services/              # Email service
+├── utils/                 # Helpers & validators
+├── views/                 # Pages (dashboard, analytics, admin panel)
+├── static/                # Images / assets
 ```
 
 ---
 
-## ⚙️ Setup Instructions
+## ⚙️ How to Run Admin Panel
 
-### 1️⃣ Clone Repository
+### 1️⃣ Navigate to admin_app
 
 ```
-git clone https://github.com/maniac-24/AI-Face-Recognition-Attendance-System.git
-cd AI-Face-Recognition-Attendance-System
+cd admin_app
 ```
 
----
-
-### 2️⃣ Install Dependencies
+### 2️⃣ Install dependencies (if not already)
 
 ```
 pip install -r requirements.txt
 ```
 
----
-
-### 3️⃣ Setup Secrets
-
-Create file: `.streamlit/secrets.toml`
-
-```
-[email]
-sender = "your_email@gmail.com"
-password = "your_app_password"
-```
-
----
-
-### 4️⃣ Run Application
+### 3️⃣ Run the app
 
 ```
 streamlit run app.py
@@ -85,28 +85,36 @@ streamlit run app.py
 
 ---
 
-## 📸 Screenshots
+## 🔐 Admin Workflow
 
-
+1. Admin logs into the system
+2. Reviews newly registered users
+3. Approves or rejects users
+4. Monitors attendance records
+5. Views analytics and reports
 
 ---
 
-## 🔮 Future Improvements
+## 📌 Notes
 
-* Multi-user authentication system
-* Cloud deployment (Streamlit Cloud / AWS)
-* Mobile-friendly UI
-* Live notifications system
+* Only **approved users** can mark attendance
+* Admin panel controls full system behavior
+* Ensure database connection is properly configured
+
+---
+
+## 🚀 Future Enhancements
+
+* Role-based access control
+* Advanced analytics dashboard
+* Export reports (CSV / PDF)
+* Real-time alerts
 
 ---
 
 ## 👨‍💻 Author
 
 **Prashanth M**
-Gmail: prashanthmadival64@gmail.com
+Gmail: [prashanthmadival64@gmail.com](mailto:prashanthmadival64@gmail.com)
 
 ---
-
-## ⭐ Support
-
-If you like this project, give it a ⭐ on GitHub!
