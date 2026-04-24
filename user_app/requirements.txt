@@ -1,0 +1,8 @@
+streamlit
+opencv-python
+numpy
+pandas
+pyodbc
+torch
+facenet-pytorch
+ultralytics
