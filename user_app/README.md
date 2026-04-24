@@ -95,12 +95,6 @@ streamlit run app.py
 
 ---
 
-## 📸 Screenshots
-
-(Add screenshots here)
-
----
-
 ## ⚠️ Notes
 
 * Only **approved users** can mark attendance
