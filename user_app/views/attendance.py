@@ -7,6 +7,9 @@ def show_attendance():
     if st.button("Start Camera"):
         message, img = start_attendance()
 
+        # Ensure message is never None
+        message = message or "❌ No response from system"
+
         if img is not None:
             st.image(img, caption="Captured Face", width=200)
 
